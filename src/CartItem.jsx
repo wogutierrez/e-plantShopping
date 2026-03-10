@@ -29,11 +29,6 @@ const CartItem = ({ onContinueShopping }) => {
   // Calculate total cost based on quantity for an item
   const calculateTotalCost = (item) => {};
 
-  const Hello = () => {
-    let unused = 5; // ESLint should warn here
-    return <div>Hello World</div>;
-  };
-
   return (
     <div className="cart-container">
       <h2 style={{ color: "black" }}>
