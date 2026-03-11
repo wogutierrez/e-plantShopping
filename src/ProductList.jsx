@@ -13,6 +13,7 @@ function ProductList({ onHomeClick }) {
 
   const handleAddToCart = (product) => {
     dispatch(addItem(product));
+    // I am here
   };
 
   const calculateTotalQuantity = () => {
@@ -293,6 +294,7 @@ function ProductList({ onHomeClick }) {
     e.preventDefault();
     setShowCart(true); // Set showCart to true when cart icon is clicked
   };
+
   const handlePlantsClick = (e) => {
     e.preventDefault();
     setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
