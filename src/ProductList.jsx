@@ -384,7 +384,7 @@ function ProductList({ onHomeClick }) {
                       <p>{plant.description}</p>
                       <p className="product-price">{plant.cost}</p>
                       <button
-                        className={`product-button ${cartItems.some((item) => item.name === plant.name)} ? 'added-to-cart' : ' '`}
+                        className={`product-button ${cartItems.some((item) => item.name === plant.name) ? "added-to-cart" : " "}`}
                         onClick={() => handleAddToCart(plant)}
                         disabled={cartItems.some(
                           (item) => item.name === plant.name
