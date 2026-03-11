@@ -355,9 +355,7 @@ function ProductList({ onHomeClick }) {
                   ></path>
                 </svg>
                 {calculateTotalQuantity() > 0 && (
-                  <span className="cart_quantity_count">
-                    {calculateTotalQuantity()}
-                  </span>
+                  <span>{calculateTotalQuantity()}</span>
                 )}
               </h1>
             </a>
