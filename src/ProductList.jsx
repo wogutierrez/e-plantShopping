@@ -305,7 +305,6 @@ function ProductList({ onHomeClick }) {
     setShowCart(false);
   };
 
-
   return (
     <div>
       <div className="navbar" style={styleObj}>
@@ -375,7 +374,6 @@ function ProductList({ onHomeClick }) {
                 </div>
                 <div className="product-list">
                   {category.plants.map((plant, plantIndex) => (
-                    const isInCart = cartItems.some((item) => item.name === plant.name);
                     <div key={plantIndex} className="product-card">
                       <img
                         className="product-image"
@@ -386,7 +384,7 @@ function ProductList({ onHomeClick }) {
                       <p>{plant.description}</p>
                       <p className="product-price">{plant.cost}</p>
                       <button
-                        className={`product-button ${isInCart} ? 'added to Cart' : ""`}
+                        className={`product-button ${cartItems.some((item) => item.name === plant.name)} ? 'added to Cart' : ""`}
                         onClick={() => handleAddToCart(plant)}
                         disabled={cartItems.some(
                           (item) => item.name === plant.name
