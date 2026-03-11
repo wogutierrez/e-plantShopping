@@ -362,16 +362,25 @@ function ProductList({ onHomeClick }) {
         <div className="product-grid">
           <div className="product-grid">
             {plantsArray.map((category, index) => (
-              <div key={index} className="category-section">
-                <h2>{category.category}</h2>
-                <div className="product-row">
+              <div key={index}>
+                <div className="plantname_heading">
+                  <h1 className="plant_heading">{category.category}</h1>
+                </div>
+                <div className="product-list">
                   {category.plants.map((plant, plantIndex) => (
                     <div key={plantIndex} className="product-card">
-                      <img src={plant.image} alt={plant.name} />
-                      <h3>{plant.name}</h3>
+                      <img
+                        className="product-image"
+                        src={plant.image}
+                        alt={plant.name}
+                      />
+                      <h3 className="product-title">{plant.name}</h3>
                       <p>{plant.description}</p>
-                      <p className="price">{plant.cost}</p>
-                      <button onClick={() => handleAddToCart(plant)}>
+                      <p className="product-price">{plant.cost}</p>
+                      <button
+                        className="product-button"
+                        onClick={() => handleAddToCart(plant)}
+                      >
                         Add to Cart
                       </button>
                     </div>
