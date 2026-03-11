@@ -26,7 +26,7 @@ const CartItem = ({ onContinueShopping }) => {
     alert("Functionality to be added for future reference");
   };
 
-  const handleAddItem = (item) => {
+  const handleAdd = (item) => {
     dispatch(addItem({ name: item.name }));
   };
 
@@ -44,7 +44,7 @@ const CartItem = ({ onContinueShopping }) => {
     }
   };
 
-  const handleRemoveItem = (item) => {
+  const handleRemove = (item) => {
     dispatch(removeItem({ name: item.name }));
   };
 
@@ -88,7 +88,7 @@ const CartItem = ({ onContinueShopping }) => {
               </div>
               <button
                 className="cart-item-delete"
-                onClick={() => handleRemoveItem(item)}
+                onClick={() => handleRemove(item)}
               >
                 Delete
               </button>
