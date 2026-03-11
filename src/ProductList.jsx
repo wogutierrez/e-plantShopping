@@ -305,6 +305,7 @@ function ProductList({ onHomeClick }) {
     setShowCart(false);
   };
 
+
   return (
     <div>
       <div className="navbar" style={styleObj}>
@@ -374,6 +375,7 @@ function ProductList({ onHomeClick }) {
                 </div>
                 <div className="product-list">
                   {category.plants.map((plant, plantIndex) => (
+                    const isInCart = cartItems.some((item) => item.name === plant.name);
                     <div key={plantIndex} className="product-card">
                       <img
                         className="product-image"
