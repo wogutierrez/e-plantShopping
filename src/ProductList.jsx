@@ -13,7 +13,6 @@ function ProductList({ onHomeClick }) {
 
   const handleAddToCart = (product) => {
     dispatch(addItem(product));
-    // I am here
   };
 
   const calculateTotalQuantity = () => {
