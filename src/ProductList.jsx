@@ -15,6 +15,12 @@ function ProductList({ onHomeClick }) {
     dispatch(addItem(product));
   };
 
+  const calculateTotalQuantity = () => {
+    return cartItems
+      ? cartItems.reduce((total, item) => total + item.quantity, 0)
+      : 0;
+  };
+
   const plantsArray = [
     {
       category: "Air Purifying Plants",
