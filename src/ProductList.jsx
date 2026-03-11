@@ -390,7 +390,9 @@ function ProductList({ onHomeClick }) {
                           (item) => item.name === plant.name
                         )}
                       >
-                        Add to Cart
+                        {cartItems.some((item) => item.name === plant.name)
+                          ? "Added to Cart"
+                          : "Add to Cart"}
                       </button>
                     </div>
                   ))}
