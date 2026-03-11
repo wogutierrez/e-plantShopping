@@ -23,7 +23,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleCheckoutShopping = (e) => {
-    alert("Coming Soon!");
+    alert("Functionality to be added for future reference");
   };
 
   const handleAdd = (item) => {
@@ -108,12 +108,7 @@ const CartItem = ({ onContinueShopping }) => {
           Continue Shopping
         </button>
         <br />
-        <button
-          className="get-started-button1"
-          onClick={handleCheckoutShopping()}
-        >
-          Checkout
-        </button>
+        <button className="get-started-button1">Checkout</button>
       </div>
     </div>
   );
