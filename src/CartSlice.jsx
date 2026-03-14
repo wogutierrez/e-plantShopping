@@ -16,10 +16,14 @@ export const CartSlice = createSlice({
       }
     },
 
+<<<<<<< HEAD
     handleAddToCart() {},
 
+=======
+>>>>>>> 96641b528cd83364cc134e55cd6a87a282a578b2
     removeItem: (state, action) => {
-      state.items = state.items.filter((item) => item.name !== action.payload);
+      const { name } = action.payload;
+      state.items = state.items.filter((item) => item.name !== name);
     },
 
     updateQuantity: (state, action) => {
